@@ -1,9 +1,8 @@
 package com.gurudev;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @DisplayName("Testing Arithmetic Operations")
 class ArithmeticOperationsTest {
 
@@ -21,6 +20,7 @@ class ArithmeticOperationsTest {
 
     }
 
+    @Order(1)
     @DisplayName("Testing Division Operation")
     @Test
     void calculateDivisionTest() {
@@ -28,6 +28,7 @@ class ArithmeticOperationsTest {
         Assertions.assertEquals(0.9021582733812948, arithmeticOperations.calculateDivision(12.54, 13.9));
     }
 
+    @Order(2)
     @DisplayName("Testing Multiplication Operation")
     @Test
     void calculateMultiplicationTest() {
@@ -35,6 +36,7 @@ class ArithmeticOperationsTest {
         Assertions.assertEquals(8663.1295, arithmeticOperations.calculateMultiplication(93.95, 92.21));
     }
 
+    @Order(3)
     @DisplayName("Testing Addition Operation")
     @Test
     void calculateAdditionTest() {
@@ -42,6 +44,7 @@ class ArithmeticOperationsTest {
         Assertions.assertEquals(779.754, arithmeticOperations.calculateAddition(543.565, 236.189));
     }
 
+    @Order(4)
     @DisplayName("Testing Subtraction Operation")
     @Test
     void calculateSubtractionTest() {
@@ -49,6 +52,7 @@ class ArithmeticOperationsTest {
         Assertions.assertEquals(-210.101, arithmeticOperations.calculateSubtraction(764.134, 974.235));
     }
 
+    @Order(5)
     @DisplayName("Testing Modulus Operation")
     @Test
     void calculateModulusTest() {

@@ -2,9 +2,8 @@ package com.gurudev;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
 
 @DisplayName("Testing Personal Data")
 class EntityTest {
@@ -21,7 +20,7 @@ class EntityTest {
     @DisplayName("Testing data for Person 1")
     @Test
     void entityTestPerson1() {
-        
+
         entity.setFirstName("John");
         entity.setLastName("Doe");
         entity.setEmail("john.doe@example.com");
@@ -70,7 +69,8 @@ class EntityTest {
         assertEquals(345 - 678 - 9012, entity.getContactNumber());
     }
 
-    @DisplayName("Testing data for Person 3")
+
+    @DisplayName("Testing data for Person 4")
     @Test
     void entityTestPerson4() {
 
@@ -89,8 +89,8 @@ class EntityTest {
 
     }
 
-    @DisplayName("Testing Data for Person 3")
-    @Test
+    @DisplayName("Testing Data for Person 5")
+    @RepeatedTest(2)
     void entityTestPerson5() {
 
         entity.setFirstName("Charlie");

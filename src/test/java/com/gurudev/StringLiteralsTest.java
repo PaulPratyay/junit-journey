@@ -1,9 +1,6 @@
 package com.gurudev;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 @DisplayName("String Literal Testing")
 class StringLiteralsTest {
@@ -20,6 +17,7 @@ class StringLiteralsTest {
     void stringExample1Test() {
         Assertions.assertEquals("Java is platform independent", stringLiterals.stringExample1());
     }
+
 
     @DisplayName("Testing String Example 2")
     @Test
